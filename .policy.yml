@@ -1,0 +1,11 @@
+# Disposable demo policy: label-gated approval, not Cosuno's production policy.
+policy:
+  approval:
+    - demo-ready
+approval_rules:
+  - name: demo-ready
+    if:
+      has_labels:
+        - policy-bot-demo-approved
+    requires:
+      count: 0
